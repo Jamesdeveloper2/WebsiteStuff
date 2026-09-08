@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAP - El Monte, California</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+
+    <style>
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px rgba(68, 148, 239, 0.5); }
+            50% { box-shadow: 0 0 20px rgba(68, 79, 239, 0.8); }
+            100% { box-shadow: 0 0 5px rgba(68, 71, 239, 0.5); }
+        }
+
+        .membership-card {
+            transition: all 0.3s ease;
+        }
+
+        .membership-card:hover {
+            transform: translateY(-10px);
+            animation: glow 2s infinite;
+        }
+
+        .best-value {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-white min-h-screen">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-black/80 backdrop-blur-sm z-50 transition-transform duration-300" style="background: #000000">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+
+                <a href="../index.html" class="flex items-center space-x-2">
+                    <img src="../logo (transparent).webp" alt="PX Logo" class="h-12 animate__animated animate__fadeIn">
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-white focus:outline-none" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16">
+                        </path>
+                    </svg>
+                </button>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="../index.html" class="nav-link text-white">Home</a>
+                    <a href="about.html" class="nav-link text-white">About Us</a>
+                    <a href="join.html" class="nav-link text-white">Join Us</a>
+                    <a href="membership.html" class="nav-link text-white">LEAP</a>
+                    <a href="staff.html" class="nav-link text-white">Staff</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div id="mobileMenu" class="md:hidden hidden bg-black/95">
+            <div class="container mx-auto px-4 py-4">
+                <div class="flex flex-col space-y-4">
+                    <a href="../index.html" class="nav-link text-white py-2">Home</a>
+                    <a href="about.html" class="nav-link text-white py-2">About Us</a>
+                    <a href="join.html" class="nav-link text-white py-2">Join Us</a>
+                    <a href="membership.html" class="nav-link text-white py-2">LEAP</a>
+                    <a href="staff.html" class="nav-link text-white">Staff</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mx-auto px-4 py-12 pt-32">
+
+        <!-- LEAP Header -->
+        <div class="membership-card bg-gray-800 rounded-lg p-6 md:p-8 mb-8 md:mb-12 border-2 border-blue-600 relative">
+
+            <div class="best-value absolute -top-4 right-4 bg-blue-600 px-4 py-1 rounded-full text-sm font-bold">
+                LEAP
+            </div>
+
+            <div class="text-center">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-blue-500 mb-4">
+                    Law Enforcement Agency Program
+                </h1>
+
+                <p class="text-gray-300 text-lg md:text-xl">
+                    Join our law enforcement agency program and become part of the LEAP program.
+                </p>
+            </div>
+        </div>
+
+        <!-- Department Header -->
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-4 text-blue-500">
+            LEAP Departments
+        </h2>
+
+        <p class="text-center text-gray-300 mb-8 md:mb-12">
+            Read what LEAP offers below to view information, points, and requirements.
+        </p>
+
+        <!-- Departments -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+
+            <!-- CHP -->
+            <div class="membership-card bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-500">
+
+                <h2 class="text-2xl font-bold text-blue-500 mb-4">
+                    California Highway Patrol
+                </h2>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Information
+                </h3>
+
+                <p class="text-gray-400 mb-4">
+                    The California Highway Patrol provides statewide highway enforcement,
+                    traffic enforcement, investigations, and specialized law enforcement services.
+                </p>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Points
+                </h3>
+
+                <ul class="space-y-2 text-gray-300 mb-6">
+                    <li><span class="text-blue-500 mr-2">•</span>Must be in the LEAP Discord</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must meet LEAP activity requirements</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must maintain good standing in LEAP</li>
+                </ul>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Requirements
+                </h3>
+
+                <ul class="space-y-2 text-gray-300">
+                    <li><span class="text-blue-500 mr-2">•</span>Must be a member of the LEAP Discord</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must follow all LEAP Regulations</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must remain active</li>
+                    <li><span class="text-blue-500 mr-2">•</span>CHP is a Handpicked Agency</li>
+                </ul>
+
+            </div>
+
+            <!-- LASD -->
+            <div class="membership-card bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-500">
+
+                <h2 class="text-2xl font-bold text-blue-500 mb-4">
+                    Los Angeles County Sheriff's Department
+                </h2>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Information
+                </h3>
+
+                <p class="text-gray-400 mb-4">
+                    The Los Angeles County Sheriff's Department provides countywide law
+                    enforcement, patrol, custody, court services, and specialized operations.
+                </p>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Points
+                </h3>
+
+                <ul class="space-y-2 text-gray-300 mb-6">
+                    <li><span class="text-blue-500 mr-2">•</span>Must be in the LEAP Discord</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must meet LEAP activity requirements</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must maintain good standing</li>
+                </ul>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Requirements
+                </h3>
+
+                <ul class="space-y-2 text-gray-300">
+                    <li><span class="text-blue-500 mr-2">•</span>Must be a member of the LEAP Discord</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must follow all LEAP Regulations</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must remain active</li>
+                </ul>
+
+            </div>
+
+            <!-- El Monte PD -->
+            <div class="membership-card bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-500">
+
+                <h2 class="text-2xl font-bold text-blue-500 mb-4">
+                    El Monte Police Department
+                </h2>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Information
+                </h3>
+
+                <p class="text-gray-400 mb-4">
+                    The El Monte Police Department provides municipal law enforcement
+                    services throughout the City of El Monte.
+                </p>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Points
+                </h3>
+
+                <ul class="space-y-2 text-gray-300 mb-6">
+                    <li><span class="text-blue-500 mr-2">•</span>Must be in the LEAP Discord</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must meet LEAP activity requirements</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must maintain good standing</li>
+                </ul>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Requirements
+                </h3>
+
+                <ul class="space-y-2 text-gray-300">
+                    <li><span class="text-blue-500 mr-2">•</span>Must be a member of the LEAP Discord</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must follow all LEAP Regulations</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must remain active</li>
+                </ul>
+
+            </div>
+
+            <!-- Beverly Hills PD -->
+            <div class="membership-card bg-gray-800 rounded-lg p-6 border border-gray-700 hover:border-blue-500">
+
+                <h2 class="text-2xl font-bold text-blue-500 mb-4">
+                    Beverly Hills Police Department
+                </h2>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Information
+                </h3>
+
+                <p class="text-gray-400 mb-4">
+                    The Beverly Hills Police Department provides municipal law enforcement
+                    services throughout the City of Beverly Hills.
+                </p>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Points
+                </h3>
+
+                <ul class="space-y-2 text-gray-300 mb-6">
+                    <li><span class="text-blue-500 mr-2">•</span>Must be in the LEAP Discord</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must meet LEAP activity requirements</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must maintain good standing</li>
+                </ul>
+
+                <h3 class="text-lg font-bold text-white mb-2">
+                    Requirements
+                </h3>
+
+                <ul class="space-y-2 text-gray-300">
+                    <li><span class="text-blue-500 mr-2">•</span>Must be a member of the LEAP Discord</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must follow all LEAP Regulations</li>
+                    <li><span class="text-blue-500 mr-2">•</span>Must remain active</li>
+                </ul>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-gray-500">
+                &copy; 2026 El Monte, California. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Navbar hide/show on scroll
+        let lastScroll = 0;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll <= 0) {
+                header.classList.remove('transform', '-translate-y-full');
+                return;
+            }
+
+            if (currentScroll > lastScroll && !header.classList.contains('transform')) {
+                header.classList.add('transform', '-translate-y-full');
+            } else if (currentScroll < lastScroll && header.classList.contains('transform')) {
+                header.classList.remove('transform', '-translate-y-full');
+            }
+
+            lastScroll = currentScroll;
+        });
+    </script>
+
+</body>
+</html>
